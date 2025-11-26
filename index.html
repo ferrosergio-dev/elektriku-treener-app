@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elektriku Treener - Electrician Exam Prep App</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JY04XGL9R5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JY04XGL9R5');
+
+  // Clicks tracking function by stores
+    function trackStoreClick(storeName) {
+      gtag('event', 'store_click', {
+        'event_category': 'download',
+        'event_label': storeName
+      });
+    }
+  
+</script>
+  
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -204,64 +224,79 @@
 
     <!-- App Store -->
     <div class="store-item">
-      <div class="store-logo">
-        <span class="store-name">App Store</span>
-        <a href="https://apps.apple.com/ee/app/elektriku-treener/id6754495338" target="_blank">
-          <img src="images/appstore-badge.svg" alt="Download on App Store">
-        </a>
-      </div>
-      <div class="qr-code">
-        <a href="https://apps.apple.com/ee/app/elektriku-treener/id6754495338" target="_blank">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fapps.apple.com%2Fee%2Fapp%2Felektriku-treener%2Fid6754495338&size=80x80" alt="QR App Store">
-        </a>
-      </div>
-    </div>
+  <div class="store-logo">
+    <span class="store-name">App Store</span>
+    <a href="https://apps.apple.com/ee/app/elektriku-treener/id6754495338" 
+       target="_blank"
+       onclick="trackStoreClick('App Store')">
+      <img src="images/appstore-badge.svg" alt="Download on App Store">
+    </a>
+  </div>
+  <div class="qr-code">
+    <a href="https://apps.apple.com/ee/app/elektriku-treener/id6754495338" 
+       target="_blank"
+       onclick="trackStoreClick('App Store QR')">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fapps.apple.com%2Fee%2Fapp%2Felektriku-treener%2Fid6754495338&size=80x80" alt="QR App Store">
+    </a>
+  </div>
+</div>
 
     <!-- Google Play -->
-    <div class="store-item">
-      <div class="store-logo">
-        <span class="store-name">Google Play</span>
-        <a href="https://play.google.com/store/apps/details?id=ee.elektriku.treener" target="_blank">
-          <img src="images/googleplay-badge.svg" alt="Get it on Google Play">
-        </a>
-      </div>
-      <div class="qr-code">
-        <a href="https://play.google.com/store/apps/details?id=ee.elektriku.treener" target="_blank">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dee.elektriku.treener&size=80x80" alt="QR Google Play">
-        </a>
-      </div>
-    </div>
-
-    <!-- Huawei AppGallery -->
-    <div class="store-item">
-      <div class="store-logo">
-        <span class="store-name">Huawei AppGallery</span>
-        <a href="https://appgallery.huawei.com/app/C115811465" target="_blank">
-          <img src="images/appgallery-badge.svg" alt="Available on AppGallery">
-        </a>
-      </div>
-      <div class="qr-code">
-        <a href="https://appgallery.huawei.com/app/C115811465" target="_blank">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fappgallery.huawei.com%2Fapp%2FC115811465&size=80x80" alt="QR AppGallery">
-        </a>
-      </div>
-    </div>
-
-    <!-- RuStore -->
-    <div class="store-item">
-      <div class="store-logo">
-        <span class="store-name">RuStore</span>
-        <a href="https://www.rustore.ru/catalog/app/ee.elektriku.treener" target="_blank">
-          <img src="images/rustore-badge.svg" alt="Available on RuStore">
-        </a>
-      </div>
-      <div class="qr-code">
-        <a href="https://www.rustore.ru/catalog/app/ee.elektriku.treener" target="_blank">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fwww.rustore.ru%2Fcatalog%2Fapp%2Fee.elektriku.treener&size=80x80" alt="QR RuStore">
-        </a>
-      </div>
-    </div>
+<div class="store-item">
+  <div class="store-logo">
+    <span class="store-name">Google Play</span>
+    <a href="https://play.google.com/store/apps/details?id=ee.elektriku.treener" 
+       target="_blank"
+       onclick="trackStoreClick('Google Play')">
+      <img src="images/googleplay-badge.svg" alt="Get it on Google Play">
+    </a>
   </div>
+  <div class="qr-code">
+    <a href="https://play.google.com/store/apps/details?id=ee.elektriku.treener" 
+       target="_blank"
+       onclick="trackStoreClick('Google Play QR')">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dee.elektriku.treener&size=80x80" alt="QR Google Play">
+    </a>
+  </div>
+</div>
+
+<!-- Huawei AppGallery -->
+<div class="store-item">
+  <div class="store-logo">
+    <span class="store-name">Huawei AppGallery</span>
+    <a href="https://appgallery.huawei.com/app/C115811465" 
+       target="_blank"
+       onclick="trackStoreClick('Huawei AppGallery')">
+      <img src="images/appgallery-badge.svg" alt="Available on AppGallery">
+    </a>
+  </div>
+  <div class="qr-code">
+    <a href="https://appgallery.huawei.com/app/C115811465" 
+       target="_blank"
+       onclick="trackStoreClick('Huawei AppGallery QR')">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fappgallery.huawei.com%2Fapp%2FC115811465&size=80x80" alt="QR AppGallery">
+    </a>
+  </div>
+</div>
+
+<!-- RuStore -->
+<div class="store-item">
+  <div class="store-logo">
+    <span class="store-name">RuStore</span>
+    <a href="https://www.rustore.ru/catalog/app/ee.elektriku.treener" 
+       target="_blank"
+       onclick="trackStoreClick('RuStore')">
+      <img src="images/rustore-badge.svg" alt="Available on RuStore">
+    </a>
+  </div>
+  <div class="qr-code">
+    <a href="https://www.rustore.ru/catalog/app/ee.elektriku.treener" 
+       target="_blank"
+       onclick="trackStoreClick('RuStore QR')">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fwww.rustore.ru%2Fcatalog%2Fapp%2Fee.elektriku.treener&size=80x80" alt="QR RuStore">
+    </a>
+  </div>
+</div>
 
   <div class="content-section" style="text-align: center; font-size: 14px; color: #666;">
     <p><strong>Built by an electrician, for electricians!</strong><br>
