@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elektriku Treener - Electrician Exam Prep App</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    .app-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c5aa0;
+      margin-bottom: 10px;
+    }
+    
+    .app-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c5aa0;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 8px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    
+    .feature-item {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 4px solid #2c5aa0;
+    }
+    
+    .download-section {
+      text-align: center;
+      background: linear-gradient(135deg, #2c5aa0, #3a6bc0);
+      color: white;
+      border-radius: 12px;
+      padding: 30px;
+    }
+    
+    .download-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .store-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      transition: transform 0.2s;
+    }
+    
+    .store-item:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.15);
+    }
+    
+    .store-logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .store-logo img {
+      height: 40px;
+      margin-right: 12px;
+    }
+    
+    .qr-code img {
+      height: 80px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 4px;
+      background: white;
+    }
+    
+    .store-name {
+      font-weight: bold;
+      margin-right: 12px;
+      color: white;
+    }
+    
+    .tag {
+      display: inline-block;
+      background: #e3f2fd;
+      color: #2c5aa0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    
+    @media (max-width: 600px) {
+      .store-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .qr-code {
+        margin-top: 12px;
+        align-self: flex-end;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="app-title">Elektriku Treener</div>
+    <div class="app-subtitle">Electrician Exam Preparation App</div>
+    <div>
+      <span class="tag">100% Free</span>
+      <span class="tag">Ad-Free</span>
+      <span class="tag">Fully Offline</span>
+      <span class="tag">GDPR Compliant</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-title">About the App</div>
+    <p><strong>Elektriku Treener</strong> is a free, ad-free, fully offline exam prep app created by an electrician for electricians in Estonia. It helps you confidently prepare for level 3, 4, and 5 qualification exams with realistic simulations, instant feedback, and personalized progress tracking — all without internet.</p>
+  </div>
+
+  <div class="content-section">
+    <div class="section-title">Key Features</div>
+    <div class="features-grid">
+      <div class="feature-item">
+        <strong>1064 Questions</strong><br>
+        Across all levels and topics (Safety, Measurement, Installation, etc.)
+      </div>
+      <div class="feature-item">
+        <strong>Smart Practice Mode</strong><br>
+        Shuffled questions + randomized answers — learn concepts, not memorize layouts
+      </div>
+      <div class="feature-item">
+        <strong>Real Exam Simulation</strong><br>
+        50–80 questions; 70% pass mark with instant feedback
+      </div>
+      <div class="feature-item">
+        <strong>Progress Tracking</strong><br>
+        Three independent "knowledge batteries" (Levels 3/4/5) fill as you learn
+      </div>
+      <div class="feature-item">
+        <strong>Trilingual Support</strong><br>
+        English, Estonian, and Russian with auto-detection
+      </div>
+      <div class="feature-item">
+        <strong>Complete Privacy</strong><br>
+        All data stays on your device — fully GDPR compliant
+      </div>
+    </div>
+  </div>
+
+  <div class="download-section">
+    <div class="download-title">Download Now</div>
+    <p style="margin-bottom: 24px; opacity: 0.9;">Available on all major app stores</p>
+
+    <!-- App Store -->
+    <div class="store-item">
+      <div class="store-logo">
+        <span class="store-name">App Store</span>
+        <a href="https://apps.apple.com/ee/app/elektriku-treener/id6754495338" target="_blank">
+          <img src="images/appstore-badge.svg" alt="Download on App Store">
+        </a>
+      </div>
+      <div class="qr-code">
+        <a href="https://apps.apple.com/ee/app/elektriku-treener/id6754495338" target="_blank">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fapps.apple.com%2Fee%2Fapp%2Felektriku-treener%2Fid6754495338&size=80x80" alt="QR App Store">
+        </a>
+      </div>
+    </div>
+
+    <!-- Google Play -->
+    <div class="store-item">
+      <div class="store-logo">
+        <span class="store-name">Google Play</span>
+        <a href="https://play.google.com/store/apps/details?id=ee.elektriku.treener" target="_blank">
+          <img src="images/googleplay-badge.svg" alt="Get it on Google Play">
+        </a>
+      </div>
+      <div class="qr-code">
+        <a href="https://play.google.com/store/apps/details?id=ee.elektriku.treener" target="_blank">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dee.elektriku.treener&size=80x80" alt="QR Google Play">
+        </a>
+      </div>
+    </div>
+
+    <!-- Huawei AppGallery -->
+    <div class="store-item">
+      <div class="store-logo">
+        <span class="store-name">Huawei AppGallery</span>
+        <a href="https://appgallery.huawei.com/app/C115811465" target="_blank">
+          <img src="images/appgallery-badge.svg" alt="Available on AppGallery">
+        </a>
+      </div>
+      <div class="qr-code">
+        <a href="https://appgallery.huawei.com/app/C115811465" target="_blank">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fappgallery.huawei.com%2Fapp%2FC115811465&size=80x80" alt="QR AppGallery">
+        </a>
+      </div>
+    </div>
+
+    <!-- RuStore -->
+    <div class="store-item">
+      <div class="store-logo">
+        <span class="store-name">RuStore</span>
+        <a href="https://www.rustore.ru/catalog/app/ee.elektriku.treener" target="_blank">
+          <img src="images/rustore-badge.svg" alt="Available on RuStore">
+        </a>
+      </div>
+      <div class="qr-code">
+        <a href="https://www.rustore.ru/catalog/app/ee.elektriku.treener" target="_blank">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fwww.rustore.ru%2Fcatalog%2Fapp%2Fee.elektriku.treener&size=80x80" alt="QR RuStore">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section" style="text-align: center; font-size: 14px; color: #666;">
+    <p><strong>Built by an electrician, for electricians!</strong><br>
+    This isn't just a quiz app — it's a professional tool to build confidence and pass Estonia's electrician certification with ease.</p>
+  </div>
+</body>
+</html>
