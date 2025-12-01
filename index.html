@@ -19,6 +19,174 @@
         'event_label': storeName
       });
     }
+
+    // Language management
+    let currentLanguage = 'en';
+    const translations = {
+      en: {
+        title: "Elektriku Treener",
+        subtitle: "Electrician Exam Preparation App",
+        aboutTitle: "About the App",
+        aboutText: "Elektriku Treener is a free, ad-free, fully offline exam prep app created by an electrician for electricians in Estonia. It helps you confidently prepare for level 3, 4, and 5 qualification exams with realistic simulations, instant feedback, and personalized progress tracking — all without internet.",
+        levelsTitle: "Exam Levels",
+        featuresTitle: "Key Features",
+        downloadTitle: "Download Now",
+        downloadSubtitle: "Available on all major app stores",
+        professionalTitle: "Professional Tool",
+        professionalText: "Built by an electrician, for electricians! This isn't just a quiz app — it's a professional tool to build confidence and pass Estonia's electrician certification with ease.",
+        quote: "The best preparation for tomorrow's electrical exams is doing your best today.",
+        questions: "Questions",
+        examLevels: "Exam Levels",
+        languages: "Languages",
+        offline: "Offline",
+        level3: "Level 3",
+        level3desc: "Basic electrical certification",
+        level4: "Level 4", 
+        level4desc: "Advanced electrical work",
+        level5: "Level 5",
+        level5desc: "Master electrician level",
+        feature1title: "1064 Questions",
+        feature1desc: "Across all levels and topics (Safety, Measurement, Installation, etc.)",
+        feature2title: "Smart Practice Mode",
+        feature2desc: "Shuffled questions + randomized answers — learn concepts, not memorize layouts",
+        feature3title: "Real Exam Simulation", 
+        feature3desc: "50–80 questions; 70% pass mark with instant feedback",
+        feature4title: "Progress Tracking",
+        feature4desc: "Three independent knowledge batteries (Levels 3/4/5) fill as you learn",
+        feature5title: "Trilingual Support",
+        feature5desc: "English, Estonian, and Russian with auto-detection",
+        feature6title: "Complete Privacy",
+        feature6desc: "All data stays on your device — fully GDPR compliant"
+      },
+      ru: {
+        title: "Elektriku Treener",
+        subtitle: "Приложение для подготовки к экзаменам электриков",
+        aboutTitle: "О приложении", 
+        aboutText: "Elektriku Treener - это бесплатное приложение для подготовки к экзаменам, созданное электриком для электриков в Эстонии. Оно помогает уверенно готовиться к квалификационным экзаменам 3, 4 и 5 уровня с реалистичными симуляциями, мгновенной обратной связью и отслеживанием прогресса — полностью без интернета.",
+        levelsTitle: "Уровни экзаменов",
+        featuresTitle: "Основные возможности",
+        downloadTitle: "Скачать сейчас",
+        downloadSubtitle: "Доступно во всех основных магазинах приложений",
+        professionalTitle: "Профессиональный инструмент",
+        professionalText: "Создано электриком для электриков! Это не просто приложение с тестами — это профессиональный инструмент для уверенной сдачи сертификации электрика в Эстонии.",
+        quote: "Лучшая подготовка к завтрашним экзаменам по электрике — делать всё возможное сегодня.",
+        questions: "Вопросов",
+        examLevels: "Уровней экзаменов", 
+        languages: "Языка",
+        offline: "Оффлайн",
+        level3: "Уровень 3",
+        level3desc: "Базовая электросертификация",
+        level4: "Уровень 4",
+        level4desc: "Продвинутые электромонтажные работы", 
+        level5: "Уровень 5",
+        level5desc: "Уровень мастера-электрика",
+        feature1title: "1064 Вопроса",
+        feature1desc: "По всем уровням и темам (Безопасность, Измерения, Монтаж и т.д.)",
+        feature2title: "Умный режим практики",
+        feature2desc: "Перемешанные вопросы + рандомизированные ответы — изучайте концепции, а не запоминайте расположение",
+        feature3title: "Реальная симуляция экзамена",
+        feature3desc: "50–80 вопросов; 70% проходной балл с мгновенной обратной связью",
+        feature4title: "Отслеживание прогресса",
+        feature4desc: "Три независимых «батареи знаний» (Уровни 3/4/5) заполняются по мере обучения",
+        feature5title: "Трехъязычная поддержка", 
+        feature5desc: "Английский, эстонский и русский с автоопределением",
+        feature6title: "Полная конфиденциальность",
+        feature6desc: "Все данные хранятся на вашем устройстве — полностью соответствует GDPR"
+      },
+      et: {
+        title: "Elektriku Treener", 
+        subtitle: "Elektriku Eksamite Ettevalmistuse Rakendus",
+        aboutTitle: "Rakendusest",
+        aboutText: "Elektriku Treener on tasuta, reklaamivaba, täielikult võrguühenduseta eksamite ettevalmistuse rakendus, mille on loonud elektrik Eesti elektrikute jaoks. See aitab teil kindlalt valmistuda 3., 4. ja 5. taseme kvalifikatsioonieksamiteks reaalsete simulatsioonide, kohese tagasiside ja isikupärastatud edenemise jälgimisega — kõik ilma internetita.",
+        levelsTitle: "Eksami Tasemed",
+        featuresTitle: "Peamised Võimalused",
+        downloadTitle: "Lae Kohe alla",
+        downloadSubtitle: "Saadaval kõigis peamistes rakenduste poodides",
+        professionalTitle: "Professionaalne Tööriist",
+        professionalText: "Ehitatud elektriku poolt, elektrikutele! See pole lihtsalt viktoriinirakendus — see on professionaalne tööriist enesekindluse loomiseks ja Eesti elektriku sertifitseerimise edukaks sooritamiseks.",
+        quote: "Parim ettevalmistus homsete elektriliste eksamiteks on tänase parima andmine.",
+        questions: "Küsimust",
+        examLevels: "Eksami Taset",
+        languages: "Keelt",
+        offline: "Võrguühenduseta",
+        level3: "Tase 3",
+        level3desc: "Põhielektri sertifitseerimine",
+        level4: "Tase 4",
+        level4desc: "Täiustatud elektritööd",
+        level5: "Tase 5", 
+        level5desc: "Meisterelektriku tase",
+        feature1title: "1064 Küsimust",
+        feature1desc: "Kõikidel tasemetel ja teemadel (Ohutus, Mõõtmine, Paigaldus jne)",
+        feature2title: "Nutikas Harjutamise Režiim",
+        feature2desc: "Segatud küsimused + juhuslikud vastused — õpi kontseptsioone, mitte jäta meelde paigutusi",
+        feature3title: "Päris Eksami Simulatsioon",
+        feature3desc: "50–80 küsimust; 70% lävend kohese tagasisidega",
+        feature4title: "Edenemise Jälgimine",
+        feature4desc: "Kolm sõltumatut «teadmiste patareid» (Tasemed 3/4/5) täituvad õppimise käigus",
+        feature5title: "Kolmekeelne Toetus",
+        feature5desc: "Inglise, eesti ja vene keel automaatse tuvastamisega",
+        feature6title: "Täielik Privaatsus",
+        feature6desc: "Kõik andmed jäävad teie seadmesse — täielikult GDPR-ile vastav"
+      }
+    };
+
+    function changeLanguage(lang) {
+      currentLanguage = lang;
+      updateContent();
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`.lang-btn[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+    }
+
+    function updateContent() {
+      const t = translations[currentLanguage];
+      document.querySelector('.app-title').textContent = t.title;
+      document.querySelector('.app-subtitle').textContent = t.subtitle;
+      document.querySelector('[data-translate="aboutTitle"]').textContent = t.aboutTitle;
+      document.querySelector('[data-translate="aboutText"]').textContent = t.aboutText;
+      document.querySelector('[data-translate="levelsTitle"]').textContent = t.levelsTitle;
+      document.querySelector('[data-translate="featuresTitle"]').textContent = t.featuresTitle;
+      document.querySelector('[data-translate="downloadTitle"]').textContent = t.downloadTitle;
+      document.querySelector('[data-translate="downloadSubtitle"]').textContent = t.downloadSubtitle;
+      document.querySelector('[data-translate="professionalTitle"]').textContent = t.professionalTitle;
+      document.querySelector('[data-translate="professionalText"]').textContent = t.professionalText;
+      document.querySelector('[data-translate="quote"]').textContent = t.quote;
+      
+      // Stats
+      document.querySelector('[data-translate="questions"]').textContent = t.questions;
+      document.querySelector('[data-translate="examLevels"]').textContent = t.examLevels;
+      document.querySelector('[data-translate="languages"]').textContent = t.languages;
+      document.querySelector('[data-translate="offline"]').textContent = t.offline;
+      
+      // Levels
+      document.querySelector('[data-translate="level3"]').textContent = t.level3;
+      document.querySelector('[data-translate="level3desc"]').textContent = t.level3desc;
+      document.querySelector('[data-translate="level4"]').textContent = t.level4;
+      document.querySelector('[data-translate="level4desc"]').textContent = t.level4desc;
+      document.querySelector('[data-translate="level5"]').textContent = t.level5;
+      document.querySelector('[data-translate="level5desc"]').textContent = t.level5desc;
+      
+      // Features
+      document.querySelector('[data-translate="feature1title"]').textContent = t.feature1title;
+      document.querySelector('[data-translate="feature1desc"]').textContent = t.feature1desc;
+      document.querySelector('[data-translate="feature2title"]').textContent = t.feature2title;
+      document.querySelector('[data-translate="feature2desc"]').textContent = t.feature2desc;
+      document.querySelector('[data-translate="feature3title"]').textContent = t.feature3title;
+      document.querySelector('[data-translate="feature3desc"]').textContent = t.feature3desc;
+      document.querySelector('[data-translate="feature4title"]').textContent = t.feature4title;
+      document.querySelector('[data-translate="feature4desc"]').textContent = t.feature4desc;
+      document.querySelector('[data-translate="feature5title"]').textContent = t.feature5title;
+      document.querySelector('[data-translate="feature5desc"]').textContent = t.feature5desc;
+      document.querySelector('[data-translate="feature6title"]').textContent = t.feature6title;
+      document.querySelector('[data-translate="feature6desc"]').textContent = t.feature6desc;
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      updateContent();
+    });
   </script>
   
   <style>
@@ -56,6 +224,37 @@
       top: 20px;
       right: 30px;
       opacity: 0.3;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .lang-btn {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+    
+    .lang-btn.active {
+      background: rgba(255,255,255,0.4);
+      border-color: rgba(255,255,255,0.6);
     }
     
     .app-title {
@@ -301,6 +500,10 @@
         top: 10px;
         right: 20px;
       }
+      .language-switcher {
+        top: 15px;
+        left: 20px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -311,12 +514,25 @@
       .store-logo img {
         height: 35px;
       }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
+      <div class="language-switcher">
+        <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+        <button class="lang-btn" onclick="changeLanguage('et')">ET</button>
+      </div>
+      
       <div class="app-title">⚡ Elektriku Treener</div>
       <div class="app-subtitle">Electrician Exam Preparation App</div>
       <div class="tags">
@@ -329,89 +545,89 @@
     </div>
 
     <div class="content-section">
-      <div class="section-title">About the App</div>
-      <p><strong>Elektriku Treener</strong> is a free, ad-free, fully offline exam prep app created by an electrician for electricians in Estonia. It helps you confidently prepare for level 3, 4, and 5 qualification exams with realistic simulations, instant feedback, and personalized progress tracking — all without internet.</p>
+      <div class="section-title" data-translate="aboutTitle">About the App</div>
+      <p data-translate="aboutText"><strong>Elektriku Treener</strong> is a free, ad-free, fully offline exam prep app created by an electrician for electricians in Estonia. It helps you confidently prepare for level 3, 4, and 5 qualification exams with realistic simulations, instant feedback, and personalized progress tracking — all without internet.</p>
 
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-number">1064</div>
-          <div class="stat-label">Questions</div>
+          <div class="stat-label" data-translate="questions">Questions</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">3</div>
-          <div class="stat-label">Exam Levels</div>
+          <div class="stat-label" data-translate="examLevels">Exam Levels</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">3</div>
-          <div class="stat-label">Languages</div>
+          <div class="stat-label" data-translate="languages">Languages</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">100%</div>
-          <div class="stat-label">Offline</div>
+          <div class="stat-label" data-translate="offline">Offline</div>
         </div>
       </div>
     </div>
 
     <div class="content-section">
-      <div class="section-title">Exam Levels</div>
+      <div class="section-title" data-translate="levelsTitle">Exam Levels</div>
       <div class="exam-levels">
         <div class="level-card">
           <div class="level-icon">🔧</div>
-          <div class="level-title">Level 3</div>
-          <div>Basic electrical certification</div>
+          <div class="level-title" data-translate="level3">Level 3</div>
+          <div data-translate="level3desc">Basic electrical certification</div>
         </div>
         <div class="level-card">
           <div class="level-icon">⚡</div>
-          <div class="level-title">Level 4</div>
-          <div>Advanced electrical work</div>
+          <div class="level-title" data-translate="level4">Level 4</div>
+          <div data-translate="level4desc">Advanced electrical work</div>
         </div>
         <div class="level-card">
           <div class="level-icon">🏗️</div>
-          <div class="level-title">Level 5</div>
-          <div>Master electrician level</div>
+          <div class="level-title" data-translate="level5">Level 5</div>
+          <div data-translate="level5desc">Master electrician level</div>
         </div>
       </div>
     </div>
 
     <div class="content-section">
-      <div class="section-title">Key Features</div>
+      <div class="section-title" data-translate="featuresTitle">Key Features</div>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">📚</div>
-          <div class="feature-title">1064 Questions</div>
-          <div>Across all levels and topics (Safety, Measurement, Installation, etc.)</div>
+          <div class="feature-title" data-translate="feature1title">1064 Questions</div>
+          <div data-translate="feature1desc">Across all levels and topics (Safety, Measurement, Installation, etc.)</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🎯</div>
-          <div class="feature-title">Smart Practice Mode</div>
-          <div>Shuffled questions + randomized answers — learn concepts, not memorize layouts</div>
+          <div class="feature-title" data-translate="feature2title">Smart Practice Mode</div>
+          <div data-translate="feature2desc">Shuffled questions + randomized answers — learn concepts, not memorize layouts</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📝</div>
-          <div class="feature-title">Real Exam Simulation</div>
-          <div>50–80 questions; 70% pass mark with instant feedback</div>
+          <div class="feature-title" data-translate="feature3title">Real Exam Simulation</div>
+          <div data-translate="feature3desc">50–80 questions; 70% pass mark with instant feedback</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📊</div>
-          <div class="feature-title">Progress Tracking</div>
-          <div>Three independent "knowledge batteries" (Levels 3/4/5) fill as you learn</div>
+          <div class="feature-title" data-translate="feature4title">Progress Tracking</div>
+          <div data-translate="feature4desc">Three independent knowledge batteries (Levels 3/4/5) fill as you learn</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌐</div>
-          <div class="feature-title">Trilingual Support</div>
-          <div>English, Estonian, and Russian with auto-detection</div>
+          <div class="feature-title" data-translate="feature5title">Trilingual Support</div>
+          <div data-translate="feature5desc">English, Estonian, and Russian with auto-detection</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔒</div>
-          <div class="feature-title">Complete Privacy</div>
-          <div>All data stays on your device — fully GDPR compliant</div>
+          <div class="feature-title" data-translate="feature6title">Complete Privacy</div>
+          <div data-translate="feature6desc">All data stays on your device — fully GDPR compliant</div>
         </div>
       </div>
     </div>
 
     <div class="download-section">
-      <div class="download-title">Download Now</div>
-      <div class="download-subtitle">Available on all major app stores</div>
+      <div class="download-title" data-translate="downloadTitle">Download Now</div>
+      <div class="download-subtitle" data-translate="downloadSubtitle">Available on all major app stores</div>
       
       <div class="stores-grid">
         <!-- App Store -->
@@ -473,25 +689,13 @@
     </div>
 
     <div class="content-section">
-      <div class="section-title">Professional Tool</div>
-      <p><strong>Built by an electrician, for electricians!</strong> This isn't just a quiz app — it's a professional tool to build confidence and pass Estonia's electrician certification with ease.</p>
+      <div class="section-title" data-translate="professionalTitle">Professional Tool</div>
+      <p data-translate="professionalText"><strong>Built by an electrician, for electricians!</strong> This isn't just a quiz app — it's a professional tool to build confidence and pass Estonia's electrician certification with ease.</p>
       
-      <div class="quote">
+      <div class="quote" data-translate="quote">
         "The best preparation for tomorrow's electrical exams is doing your best today."
       </div>
     </div>
   </div>
-
-  <script>
-    // Add smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
 </body>
 </html>
