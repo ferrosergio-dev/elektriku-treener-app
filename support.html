@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Developer - Elektriku Treener</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY04XGL9R5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JY04XGL9R5');
+
+    function trackDonationClick(type) {
+      gtag('event', 'donation_click', {
+        'event_category': 'support',
+        'event_label': type
+      });
+    }
+
+    // Language management
+    let currentLanguage = 'en';
+    const translations = {
+      en: {
+        title: "Support Developer",
+        subtitle: "Help keep this electrician's tool free and ad-free",
+        thankYouTitle: "Thank You, Electricians!",
+        thankYouText: "Thank you for using Elektriku Treener! As a fellow electrician, I created this app to help our community pass exams with confidence. Your support helps keep the app completely free and ad-free while adding new questions and features.",
+        cryptoSection: "Cryptocurrency Donations",
+        cryptoSubtitle: "Fast, global electrical support ⚡",
+        whyCrypto: "Why cryptocurrency for electricians?",
+        recommended: "Recommended for electricians",
+        fastTransactions: "Instant power-up",
+        fastTransactionsDesc: "Transactions complete in minutes, not days",
+        lowFees: "Low voltage fees",
+        lowFeesDesc: "USDT on TRC20 has minimal transaction costs",
+        globalAccess: "Universal current",
+        globalAccessDesc: "Available to electricians worldwide",
+        bankDetails: "Bank Transfer Details",
+        quickActions: "Quick Connection",
+        copyIban: "Copy IBAN",
+        openBankApp: "Open banking app",
+        nameCopied: "Name copied to clipboard",
+        referenceCopied: "Payment reference copied",
+        ibanCopied: "IBAN copied!",
+        addressCopied: "Address copied",
+        copy: "Copy",
+        network: "Network",
+        address: "Address",
+        copyAddress: "Copy address",
+        howToSendCrypto: "How to send cryptocurrency",
+        important: "Safety First!",
+        cryptoNetworkWarning: "Always verify the network before sending. USDT on TRC20 is recommended for electricians due to low fees and fast confirmation.",
+        cryptoInstructions: "Simple wiring diagram for sending cryptocurrency:",
+        step1Copy: "Copy the address",
+        step1Desc: "Click the copy icon next to the desired address",
+        step2Open: "Open your crypto wallet",
+        step2Desc: "Binance, Trust Wallet, or any electrical-grade wallet",
+        step3Paste: "Paste address and amount",
+        step3Desc: "Ensure correct network selection",
+        step4Confirm: "Confirm the transfer",
+        step4Desc: "Double-check details and energize the transfer",
+        nameLabel: "Recipient name",
+        ibanLabel: "IBAN:",
+        referenceLabel: "Payment reference",
+        referenceText: "Elektriku Treener app support",
+        bankAppInstructions: "Open your banking app and use these details. This helps keep the app free for all electricians.",
+        rememberToCopy: "Don't forget to copy",
+        close: "Close Circuit",
+        backToMain: "← Back to Main Page",
+        privacyNote: "All information is provided for voluntary support. No payment data is stored. Made by an electrician for electricians.",
+        qrInstructions: "Scan QR code with your banking app",
+        electricianNote: "This app is created and maintained by a certified electrician. Your support directly fuels improvements and new question updates."
+      },
+      ru: {
+        title: "Поддержать разработчика",
+        subtitle: "Помогите сохранить этот инструмент электрика бесплатным и без рекламы",
+        thankYouTitle: "Спасибо, электрики!",
+        thankYouText: "Спасибо, что используете Elektriku Treener! Как электрик, я создал это приложение, чтобы помочь нашему сообществу сдавать экзамены с уверенностью. Ваша поддержка помогает сохранять приложение полностью бесплатным и без рекламы, добавляя новые вопросы и функции.",
+        cryptoSection: "Криптовалюта",
+        cryptoSubtitle: "Быстрая глобальная поддержка электриков ⚡",
+        whyCrypto: "Почему криптовалюта для электриков?",
+        recommended: "Рекомендуется электрикам",
+        fastTransactions: "Мгновенное подключение",
+        fastTransactionsDesc: "Транзакции завершаются за минуты, а не дни",
+        lowFees: "Низкие комиссии",
+        lowFeesDesc: "USDT на TRC20 имеет минимальные комиссии",
+        globalAccess: "Универсальный ток",
+        globalAccessDesc: "Доступно электрикам по всему миру",
+        bankDetails: "Банковские реквизиты",
+        quickActions: "Быстрое подключение",
+        copyIban: "Скопировать IBAN",
+        openBankApp: "Открыть банковское приложение",
+        nameCopied: "Имя скопировано в буфер",
+        referenceCopied: "Назначение скопировано в буфер",
+        ibanCopied: "IBAN скопирован!",
+        addressCopied: "Адрес скопирован",
+        copy: "Копировать",
+        network: "Сеть",
+        address: "Адрес",
+        copyAddress: "Скопировать адрес",
+        howToSendCrypto: "Как отправить криптовалюту",
+        important: "Безопасность прежде всего!",
+        cryptoNetworkWarning: "Всегда проверяйте сеть перед отправкой. USDT на TRC20 рекомендуется электрикам из-за низких комиссий и быстрого подтверждения.",
+        cryptoInstructions: "Простая схема подключения для отправки криптовалюты:",
+        step1Copy: "Скопируйте адрес",
+        step1Desc: "Нажмите на иконку копирования рядом с нужным адресом",
+        step2Open: "Откройте ваш крипто-кошелек",
+        step2Desc: "Binance, Trust Wallet или любой надежный кошелек",
+        step3Paste: "Вставьте адрес и сумму",
+        step3Desc: "Убедитесь в правильности выбранной сети",
+        step4Confirm: "Подтвердите перевод",
+        step4Desc: "Проверьте детали и выполните перевод",
+        nameLabel: "Имя получателя",
+        ibanLabel: "IBAN:",
+        referenceLabel: "Назначение",
+        referenceText: "Поддержка приложения Elektriku Treener",
+        bankAppInstructions: "Откройте ваше банковское приложение и используйте эти реквизиты. Это помогает сохранять приложение бесплатным для всех электриков.",
+        rememberToCopy: "Не забудьте скопировать",
+        close: "Закрыть",
+        backToMain: "← На главную страницу",
+        privacyNote: "Вся информация предоставлена для добровольной поддержки. Платежные данные не хранятся. Создано электриком для электриков.",
+        qrInstructions: "Отсканируйте QR-код банковским приложением",
+        electricianNote: "Это приложение создано и поддерживается сертифицированным электриком. Ваша поддержка напрямую способствует улучшениям и обновлениям вопросов."
+      },
+      et: {
+        title: "Toeta arendajat",
+        subtitle: "Aita hoida seda elektriku tööriista tasuta ja reklaamivabana",
+        thankYouTitle: "Aitäh, elektrikud!",
+        thankYouText: "Täname, et kasutate Elektriku Treenerit! Teisest elektrikuna lõin selle rakenduse, et aidata meie kogukonnal eksameid kindlusega sooritada. Teie toetus aitab hoida rakendust täielikult tasuta ja reklaamivabana, lisades uusi küsimusi ja funktsioone.",
+        cryptoSection: "Krüptoraha",
+        cryptoSubtitle: "Kiire, globaalne elektriku toetus ⚡",
+        whyCrypto: "Miks krüptoraha elektrikutele?",
+        recommended: "Soovitatud elektrikutele",
+        fastTransactions: "Kohene ühendamine",
+        fastTransactionsDesc: "Tehingud lõpule viidud minutitega, mitte päevadega",
+        lowFees: "Madalad tasud",
+        lowFeesDesc: "USDT TRC20 võrgus on minimaalsed tehingutasud",
+        globalAccess: "Universaalne vool",
+        globalAccessDesc: "Kättesaadav elektrikutele üle kogu maailma",
+        bankDetails: "Pangaülekande andmed",
+        quickActions: "Kiire ühendus",
+        copyIban: "Kopeeri IBAN",
+        openBankApp: "Ava pangarakendus",
+        nameCopied: "Nimi kopeeritud",
+        referenceCopied: "Makseviide kopeeritud",
+        ibanCopied: "IBAN kopeeritud!",
+        addressCopied: "Aadress kopeeritud",
+        copy: "Kopeeri",
+        network: "Võrk",
+        address: "Aadress",
+        copyAddress: "Kopeeri aadress",
+        howToSendCrypto: "Kuidas saata krüptoraha",
+        important: "Ohutus esikohal!",
+        cryptoNetworkWarning: "Kontrolli alati võrku enne saatmist. USDT TRC20 võrgus on soovitatav elektrikutele madalate tasude ja kiire kinnituse tõttu.",
+        cryptoInstructions: "Lihtne juhendmõõtmine krüptoraha saatmiseks:",
+        step1Copy: "Kopeeri aadress",
+        step1Desc: "Klõpsa kopeerimisikoonil soovitud aadressi kõrval",
+        step2Open: "Ava oma krüptorahakott",
+        step2Desc: "Binance, Trust Wallet või mõni usaldusväärne kott",
+        step3Paste: "Kleebi aadress ja summa",
+        step3Desc: "Kontrolli õige võrgu valikut",
+        step4Confirm: "Kinnita ülekanne",
+        step4Desc: "Kontrolli üksikasjad ja teosta ülekanne",
+        nameLabel: "Saaja nimi",
+        ibanLabel: "IBAN:",
+        referenceLabel: "Makseviide",
+        referenceText: "Elektriku Treeneri rakenduse toetus",
+        bankAppInstructions: "Ava oma pangarakendus ja kasuta neid andmeid. See aitab hoida rakendust tasuta kõigile elektrikutele.",
+        rememberToCopy: "Ära unusta kopeerida",
+        close: "Sulge",
+        backToMain: "← Tagasi pealehele",
+        privacyNote: "Kogu teave on esitatud vabatahtliku toetuse jaoks. Makseandmeid ei salvestata. Loodud elektriku poolt elektrikutele.",
+        qrInstructions: "Skänneeri QR-kood oma pangarakendusega",
+        electricianNote: "Selle rakenduse on loonud ja hooldab sertifitseeritud elektrik. Teie toetus toetab otse täiustusi ja uute küsimuste värskendusi."
+      }
+    };
+
+    function changeLanguage(lang) {
+      currentLanguage = lang;
+      updateContent();
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`.lang-btn[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+    }
+
+    function updateContent() {
+      const t = translations[currentLanguage];
+      
+      // Update all elements with data-translate attribute
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (t[key]) {
+          element.textContent = t[key];
+        }
+      });
+      
+      // Update title
+      document.title = t.title + " - Elektriku Treener";
+    }
+
+    // Clipboard functions
+    async function copyToClipboard(text, messageKey) {
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast(translations[currentLanguage][messageKey] || 'Copied!');
+      } catch (err) {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showToast(translations[currentLanguage][messageKey] || 'Copied!');
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Show crypto instructions
+    function showCryptoInstructions() {
+      const t = translations[currentLanguage];
+      const instructions = `
+        <div class="instructions-modal">
+          <h3>${t.howToSendCrypto}</h3>
+          <p>${t.cryptoInstructions}</p>
+          
+          <div class="instruction-step">
+            <div class="step-number">1</div>
+            <div>
+              <strong>${t.step1Copy}</strong>
+              <p>${t.step1Desc}</p>
+            </div>
+          </div>
+          
+          <div class="instruction-step">
+            <div class="step-number">2</div>
+            <div>
+              <strong>${t.step2Open}</strong>
+              <p>${t.step2Desc}</p>
+            </div>
+          </div>
+          
+          <div class="instruction-step">
+            <div class="step-number">3</div>
+            <div>
+              <strong>${t.step3Paste}</strong>
+              <p>${t.step3Desc}</p>
+            </div>
+          </div>
+          
+          <div class="instruction-step">
+            <div class="step-number">4</div>
+            <div>
+              <strong>${t.step4Confirm}</strong>
+              <p>${t.step4Desc}</p>
+            </div>
+          </div>
+          
+          <div class="warning-box">
+            <strong>⚠️ ${t.important}</strong>
+            <p>${t.cryptoNetworkWarning}</p>
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('modal-content').innerHTML = instructions;
+      document.getElementById('modal-title').textContent = t.howToSendCrypto;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      updateContent();
+      
+      // Close modal when clicking outside
+      document.getElementById('modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #333;
+      min-height: 100vh;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      color: white;
+      position: relative;
+    }
+    
+    .header::before {
+      content: "⚡";
+      font-size: 60px;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      opacity: 0.3;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      display: flex;
+      gap: 8px;
+    }
+    
+    .lang-btn {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+    
+    .lang-btn.active {
+      background: rgba(255,255,255,0.4);
+      border-color: rgba(255,255,255,0.6);
+    }
+    
+    .app-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .app-subtitle {
+      font-size: 20px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+    
+    .content-section {
+      padding: 30px;
+    }
+    
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6b35;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .section-title::before {
+      content: "⚡";
+      color: #f7931e;
+      font-size: 24px;
+    }
+    
+    .thank-you-card {
+      background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+      border: 2px solid #2E7D32;
+    }
+    
+    .thank-you-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    
+    .electrician-note {
+      background: #e3f2fd;
+      border-left: 4px solid #2196F3;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    
+    .crypto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    
+    .crypto-card {
+      background: #fffaf5;
+      border-radius: 12px;
+      padding: 20px;
+      border: 2px solid #ffddc1;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .crypto-card.recommended {
+      border-color: #4CAF50;
+      background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+      border: 2px solid #81C784;
+    }
+    
+    .recommended-badge {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .crypto-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .crypto-icon {
+      font-size: 24px;
+      background: #ff6b35;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .crypto-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+    
+    .crypto-network {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .address-box {
+      background: white;
+      border: 1px solid #ffddc1;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px 0;
+      font-family: 'Monospace', monospace;
+      word-break: break-all;
+      position: relative;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b35;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .copy-btn:hover {
+      background: #e55a2b;
+      transform: translateY(-1px);
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 4px solid #ff6b35;
+      border-top: 1px solid #ffddc1;
+    }
+    
+    .benefit-icon {
+      font-size: 20px;
+      color: #ff6b35;
+      margin-bottom: 10px;
+    }
+    
+    .bank-details-card {
+      background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin: 20px 0;
+      border: 2px solid #e65100;
+    }
+    
+    .detail-item {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .detail-label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .detail-value {
+      font-family: 'Monospace', monospace;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .action-btn {
+      background: white;
+      border: 2px solid #ff6b35;
+      color: #ff6b35;
+      padding: 15px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+    }
+    
+    .action-btn:hover {
+      background: #ff6b35;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+    
+    .action-btn.primary {
+      background: #ff6b35;
+      color: white;
+    }
+    
+    .action-btn.primary:hover {
+      background: #e55a2b;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+    }
+    
+    .qr-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    .qr-code {
+      display: inline-block;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 15px;
+      border: 2px solid #ffddc1;
+    }
+    
+    .qr-code img {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ffddc1;
+      border-radius: 8px;
+    }
+    
+    .privacy-note {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    
+    .back-btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      text-align: center;
+      background: #fffaf5;
+      color: #ff6b35;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid #ff6b35;
+      box-shadow: 0 3px 10px rgba(255, 107, 53, 0.2);
+    }
+    
+    .back-btn:hover {
+      background: #ff6b35;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+    
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #4CAF50;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      border: 2px solid #ff6b35;
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .modal-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6b35;
+    }
+    
+    .close-btn {
+      background: #ff6b35;
+      color: white;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .instruction-step {
+      display: flex;
+      gap: 15px;
+      margin: 15px 0;
+      padding: 15px;
+      background: #fffaf5;
+      border-radius: 10px;
+      border-left: 4px solid #ff6b35;
+    }
+    
+    .step-number {
+      background: #ff6b35;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .warning-box {
+      background: #ffebee;
+      border: 2px solid #f44336;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      color: #d32f2f;
+    }
+    
+    @media (max-width: 768px) {
+      .app-title { font-size: 28px; }
+      .app-subtitle { font-size: 18px; }
+      .crypto-grid { grid-template-columns: 1fr; }
+      .actions-grid { grid-template-columns: 1fr; }
+      .header::before {
+        font-size: 40px;
+        top: 10px;
+        right: 20px;
+      }
+      .language-switcher {
+        top: 15px;
+        left: 20px;
+      }
+      .qr-code img {
+        width: 150px;
+        height: 150px;
+      }
+      .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .language-switcher {
+        position: relative;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .address-box {
+        font-size: 12px;
+      }
+      .back-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+        <button class="lang-btn" onclick="changeLanguage('et')">ET</button>
+      </div>
+      
+      <div class="app-title" data-translate="title">⚡ Support Developer</div>
+      <div class="app-subtitle" data-translate="subtitle">Help keep this electrician's tool free and ad-free</div>
+    </div>
+
+    <div class="content-section">
+      <!-- Thank You Section -->
+      <div class="thank-you-card">
+        <div class="thank-you-icon">⚡❤️</div>
+        <h2 data-translate="thankYouTitle">Thank You, Electricians!</h2>
+        <p data-translate="thankYouText">Thank you for using Elektriku Treener! As a fellow electrician, I created this app to help our community pass exams with confidence. Your support helps keep the app completely free and ad-free while adding new questions and features.</p>
+      </div>
+
+      <!-- Electrician Note -->
+      <div class="electrician-note" data-translate="electricianNote">
+        ⚡ This app is created and maintained by a certified electrician. Your support directly fuels improvements and new question updates.
+      </div>
+
+      <!-- Cryptocurrency Section -->
+      <div class="section-title">
+        <span data-translate="cryptoSection">Cryptocurrency Donations</span>
+      </div>
+      <p style="color: #666; margin-bottom: 20px;" data-translate="cryptoSubtitle">Fast, global electrical support ⚡</p>
+
+      <!-- Crypto Cards -->
+      <div class="crypto-grid">
+        <!-- USDT TRC20 (Recommended) -->
+        <div class="crypto-card recommended">
+          <div class="recommended-badge" data-translate="recommended">Recommended for electricians</div>
+          <div class="crypto-header">
+            <div class="crypto-icon">💎</div>
+            <div>
+              <div class="crypto-name">USDT</div>
+              <div class="crypto-network">TRON (TRC20)</div>
+            </div>
+          </div>
+          
+          <div class="address-box">
+            <strong data-translate="address">Address:</strong><br>
+            THVCwpeeMhxoFq2MyazteavGcBqi6Qufoc
+            <button class="copy-btn" onclick="copyToClipboard('THVCwpeeMhxoFq2MyazteavGcBqi6Qufoc', 'addressCopied')">
+              📋 <span data-translate="copy">Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bitcoin -->
+        <div class="crypto-card">
+          <div class="crypto-header">
+            <div class="crypto-icon">₿</div>
+            <div>
+              <div class="crypto-name">Bitcoin (BTC)</div>
+              <div class="crypto-network">Bitcoin Network</div>
+            </div>
+          </div>
+          
+          <div class="address-box">
+            <strong data-translate="address">Address:</strong><br>
+            158NGiz2LaRnV7weKZFTuLMVkuPiEr6GEt
+            <button class="copy-btn" onclick="copyToClipboard('158NGiz2LaRnV7weKZFTuLMVkuPiEr6GEt', 'addressCopied')">
+              📋 <span data-translate="copy">Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Crypto Benefits -->
+      <div style="margin: 30px 0;">
+        <h3 style="color: #ff6b35; margin-bottom: 15px;" data-translate="whyCrypto">Why cryptocurrency for electricians?</h3>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡</div>
+            <strong data-translate="fastTransactions">Instant power-up</strong>
+            <p data-translate="fastTransactionsDesc">Transactions complete in minutes, not days</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <strong data-translate="lowFees">Low voltage fees</strong>
+            <p data-translate="lowFeesDesc">USDT on TRC20 has minimal transaction costs</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🌍</div>
+            <strong data-translate="globalAccess">Universal current</strong>
+            <p data-translate="globalAccessDesc">Available to electricians worldwide</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bank Details Section -->
+      <div class="section-title">
+        <span data-translate="bankDetails">Bank Transfer Details</span>
+      </div>
+
+      <div class="bank-details-card">
+        <!-- Recipient Name -->
+        <div class="detail-item">
+          <div class="detail-label" data-translate="nameLabel">Recipient name:</div>
+          <div class="detail-value">Ilja Serõšev</div>
+          <button class="copy-btn" style="position: static; margin-left: 10px;" onclick="copyToClipboard('Ilja Serõšev', 'nameCopied')">
+            📋
+          </button>
+        </div>
+
+        <!-- IBAN -->
+        <div class="detail-item">
+          <div class="detail-label" data-translate="ibanLabel">IBAN:</div>
+          <div class="detail-value">EE457700771003417343</div>
+          <button class="copy-btn" style="position: static; margin-left: 10px;" onclick="copyToClipboard('EE457700771003417343', 'ibanCopied')">
+            📋
+          </button>
+        </div>
+
+        <!-- Payment Reference -->
+        <div class="detail-item">
+          <div class="detail-label" data-translate="referenceLabel">Payment reference:</div>
+          <div class="detail-value" data-translate="referenceText">Elektriku Treener app support</div>
+          <button class="copy-btn" style="position: static; margin-left: 10px;" onclick="copyToClipboard('Elektriku Treener app support', 'referenceCopied')">
+            📋
+          </button>
+        </div>
+      </div>
+
+      <!-- QR Code for Bank Transfer -->
+      <div class="qr-section">
+        <p data-translate="qrInstructions">Scan QR code with your banking app</p>
+        <div class="qr-code">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=bank://payment?iban=EE457700771003417343&recipient=Ilja%20Ser%C3%B5%C5%A1ev&amount=&message=Elektriku%20Treener%20app%20support&size=200x200&margin=0" alt="Bank Transfer QR Code">
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="section-title">
+        <span data-translate="quickActions">Quick Connection</span>
+      </div>
+
+      <div class="actions-grid">
+        <button class="action-btn primary" onclick="showCryptoInstructions(); trackDonationClick('crypto_instructions')">
+          ⚡ <span data-translate="howToSendCrypto">How to send cryptocurrency</span>
+        </button>
+        
+        <button class="action-btn" onclick="copyToClipboard('EE457700771003417343', 'ibanCopied'); trackDonationClick('copy_iban')">
+          📋 <span data-translate="copyIban">Copy IBAN</span>
+        </button>
+        
+        <button class="action-btn" onclick="copyToClipboard('EE457700771003417343', 'ibanCopied'); alert(translations[currentLanguage].bankAppInstructions); trackDonationClick('open_bank_app')">
+          📱 <span data-translate="openBankApp">Open banking app</span>
+        </button>
+      </div>
+
+      <!-- Privacy Note -->
+      <div class="privacy-note" data-translate="privacyNote">
+        ⚡ All information is provided for voluntary support. No payment data is stored. Made by an electrician for electricians.
+      </div>
+
+      <!-- Back to Main Page -->
+      <a href="index.html" class="back-btn" onclick="trackDonationClick('back_to_main')">
+        <span data-translate="backToMain">← Back to Main Page</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Modal for Instructions -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <div id="modal-content"></div>
+      <div style="text-align: right; margin-top: 20px;">
+        <button class="action-btn" onclick="closeModal()" data-translate="close">Close Circuit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fix the copyToClipboard typo
+    window.copyToClipback = window.copyToClipboard;
+  </script>
+</body>
+</html>
