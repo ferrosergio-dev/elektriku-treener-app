@@ -56,7 +56,11 @@
         feature5title: "Trilingual Support",
         feature5desc: "English, Estonian, and Russian with auto-detection",
         feature6title: "Complete Privacy",
-        feature6desc: "All data stays on your device — fully GDPR compliant"
+        feature6desc: "All data stays on your device — fully GDPR compliant",
+        supportTitle: "Support the Electrician Developer",
+        supportSubtitle: "Help keep Elektriku Treener free, ad-free, and constantly updated with new questions",
+        supportButton: "⚡ Support Electrician Developer",
+        supportFooter: "Created by an electrician, for electricians"
       },
       ru: {
         title: "Elektriku Treener",
@@ -91,7 +95,11 @@
         feature5title: "Трехъязычная поддержка", 
         feature5desc: "Английский, эстонский и русский с автоопределением",
         feature6title: "Полная конфиденциальность",
-        feature6desc: "Все данные хранятся на вашем устройстве — полностью соответствует GDPR"
+        feature6desc: "Все данные хранятся на вашем устройстве — полностью соответствует GDPR",
+        supportTitle: "Поддержать разработчика-электрика",
+        supportSubtitle: "Помогите сохранить Elektriku Treener бесплатным, без рекламы и постоянно обновляемым с новыми вопросами",
+        supportButton: "⚡ Поддержать разработчика-электрика",
+        supportFooter: "Создано электриком для электриков"
       },
       et: {
         title: "Elektriku Treener", 
@@ -126,7 +134,11 @@
         feature5title: "Kolmekeelne Toetus",
         feature5desc: "Inglise, eesti ja vene keel automaatse tuvastamisega",
         feature6title: "Täielik Privaatsus",
-        feature6desc: "Kõik andmed jäävad teie seadmesse — täielikult GDPR-ile vastav"
+        feature6desc: "Kõik andmed jäävad teie seadmesse — täielikult GDPR-ile vastav",
+        supportTitle: "Toeta elektriku-arendajat",
+        supportSubtitle: "Aita hoida Elektriku Treenerit tasuta, reklaamivabana ja pidevalt uuendatuna uute küsimustega",
+        supportButton: "⚡ Toeta elektriku-arendajat",
+        supportFooter: "Loodud elektriku poolt elektrikutele"
       }
     };
 
@@ -153,6 +165,10 @@
       document.querySelector('[data-translate="professionalTitle"]').textContent = t.professionalTitle;
       document.querySelector('[data-translate="professionalText"]').textContent = t.professionalText;
       document.querySelector('[data-translate="quote"]').textContent = t.quote;
+      document.querySelector('[data-translate="supportTitle"]').textContent = t.supportTitle;
+      document.querySelector('[data-translate="supportSubtitle"]').textContent = t.supportSubtitle;
+      document.querySelector('[data-translate="supportButton"]').textContent = t.supportButton;
+      document.querySelector('[data-translate="supportFooter"]').textContent = t.supportFooter;
       
       // Stats
       document.querySelector('[data-translate="questions"]').textContent = t.questions;
@@ -566,6 +582,20 @@
           <div class="stat-label" data-translate="offline">Offline</div>
         </div>
       </div>
+    </div>
+
+    <!-- Support Developer Button Section - Elektriku Treener -->
+    <div class="support-section" style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #fffaf5 0%, #ffedd5 100%); margin: 0 30px 30px; border-radius: 16px; border: 2px solid #ff6b35; box-shadow: 0 5px 15px rgba(255, 107, 53, 0.1);">
+      <h3 style="color: #ff6b35; margin-bottom: 15px; font-size: 24px;" data-translate="supportTitle">⚡ Support the Electrician Developer</h3>
+      <p style="color: #666; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;" data-translate="supportSubtitle">
+        Help keep Elektriku Treener free, ad-free, and constantly updated with new questions
+      </p>
+      <a href="support.html" class="support-btn" onclick="gtag('event', 'support_click', {'event_category': 'navigation'})" 
+         style="display: inline-block; background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);"
+         data-translate="supportButton">
+        ⚡ Support Electrician Developer
+      </a>
+      <p style="margin-top: 10px; color: #666; font-size: 14px;" data-translate="supportFooter">Created by an electrician, for electricians</p>
     </div>
 
     <div class="content-section">
